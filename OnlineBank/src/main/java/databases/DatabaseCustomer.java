@@ -2,24 +2,28 @@ package databases;
 
 import java.util.HashMap;
 
+import models.Account;
+import models.Customer;
+import models.Transaction;
+
 public class DatabaseCustomer {
 
-	private static HashMap <Integer, String> customer = new HashMap<Integer, String>();
-	private static HashMap <Integer, String> account = new HashMap<Integer, String>();
-	private static HashMap <String, Integer> transaction = new HashMap<String, Integer>();
+	private static HashMap <Integer, Customer> customer = new HashMap<Integer, Customer>();
+	private static HashMap <Integer, Account> account = new HashMap<Integer, Account>();
+	private static HashMap <String, Transaction> transaction = new HashMap<String, Transaction>();
 	
-	private static HashMap <Integer, String> getCustomer(){
+	private static HashMap <Integer, Customer> getCustomer(){
 		
 		return customer;
 		
 	} 
 	
-	private static HashMap <Integer, String> getAccount(){
+	private static HashMap <Integer, Account> getAccount(){
 		
 		return account;
 	} 
 	
-	private static  HashMap <String, Integer> getTransaction(){
+	private static  HashMap <String, Transaction> getTransaction(){
 		
 		return transaction;
 		
