@@ -9,7 +9,7 @@ import models.Transaction;
 public class DatabaseCustomer {
 
 	private static HashMap <Integer, Customer> customer = new HashMap<Integer, Customer>();
-	private static HashMap <Integer, Account> account = new HashMap<Integer, Account>();
+	private static HashMap <String, Account> account = new HashMap<String, Account>();
 	private static HashMap <String, Transaction> transaction = new HashMap<String, Transaction>();
 	
 	private static HashMap <Integer, Customer> getCustomer(){
@@ -18,7 +18,7 @@ public class DatabaseCustomer {
 		
 	} 
 	
-	private static HashMap <Integer, Account> getAccount(){
+	private static HashMap <String, Account> getAccount(){
 		
 		return account;
 	} 
