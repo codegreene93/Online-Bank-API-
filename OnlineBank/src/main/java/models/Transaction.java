@@ -6,12 +6,23 @@ public class Transaction {
 		
 	}
 	
+	public Transaction(int transactionCode, int accountNo, int date, String description, String transactionType, int newBalance) {
+		this.transactionCode=transactionCode;
+		this.accountNo=accountNo;
+		this.date = date;
+		this.description = description;
+		this.transactionType=transactionType;
+		this.newBalance= newBalance;
+	}
+	
 	private int transactionCode;
 	private int accountNo;
 	private int date;
 	private String description;
 	private String transactionType;
 	private int newBalance;
+	
+	
 	public int getTransactionCode() {
 		return transactionCode;
 	}
