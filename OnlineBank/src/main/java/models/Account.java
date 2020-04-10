@@ -1,26 +1,29 @@
 package models;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Account {
 
-	public Account() {
-		
-	}
-	
-	public Account(int accountNo, int customerID,int sortNo, String accountType, int balance,int transactions) {
-		this.accountNo = accountNo;
-		this.customerID= customerID;
-		this.sortNo = sortNo;
-		this.accountType = accountType;
-		this.balance = balance;
-		this.transactions=transactions;
-	}
-	
 	private int accountNo;
 	private int customerID;
 	private int sortNo;
 	private String accountType;
 	private int balance;
-	private int transactions;
+	private Map<Integer, Transaction> transactions = new TreeMap<Integer, Transaction>();
+	
+	public Account() {
+		
+	}
+	
+	public Account(int accountNo, int customerID,int sortNo, String accountType, int balance) {
+		this.accountNo = accountNo;
+		this.customerID= customerID;
+		this.sortNo = sortNo;
+		this.accountType = accountType;
+		this.balance = balance;
+	}
 	
 	public int getAccountNo() {
 		return accountNo;
@@ -52,13 +55,13 @@ public class Account {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	public int getTransactions() {
+
+	public Map<Integer, Transaction> getTransactions() {
 		return transactions;
 	}
-	public void setTransactions(int transactions) {
+
+	public void setTransactions(HashMap<Integer, Transaction> transactions) {
 		this.transactions = transactions;
 	}
-	
-	
-	
+
 }

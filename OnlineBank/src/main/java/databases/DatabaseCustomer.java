@@ -1,6 +1,7 @@
 package databases;
 
-import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 import models.Account;
 import models.Customer;
@@ -8,24 +9,24 @@ import models.Transaction;
 
 public class DatabaseCustomer {
 
-	private static HashMap <Integer, Customer> customer = new HashMap<Integer, Customer>();
-	private static HashMap <String, Account> account = new HashMap<String, Account>();
-	private static HashMap <String, Transaction> transaction = new HashMap<String, Transaction>();
+	private static Map <Integer, Customer> customers = new TreeMap<Integer, Customer>();
+	private static Map <String, Account> accounts = new TreeMap<String, Account>();
+	private static Map <String, Transaction> transactions = new TreeMap<String, Transaction>();
 	
-	private static HashMap <Integer, Customer> getCustomer(){
+	private static Map <Integer, Customer> getCustomer(){
 		
-		return customer;
+		return customers;
 		
 	} 
 	
-	private static HashMap <String, Account> getAccount(){
+	private static Map <String, Account> getAccount(){
 		
-		return account;
+		return accounts;
 	} 
 	
-	private static  HashMap <String, Transaction> getTransaction(){
+	private static  Map <String, Transaction> getTransaction(){
 		
-		return transaction;
+		return transactions;
 		
 	}
 }

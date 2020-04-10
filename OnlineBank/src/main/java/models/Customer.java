@@ -1,32 +1,28 @@
 package models;
 
-public class Customer {
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
-	public Customer() {
-		
-	}
-	
-	public Customer(int customerID, String name, String address, String email, String password, String reenterPassword, String accounts,int accountNo) {
-		this.customerID= customerID;
-		this.name = name;
-		this.address = address;
-		this.email = email;
-		this.password=password;
-		this.reenterPassword = reenterPassword;
-		this.accounts = accounts;
-		this.accountNo=accountNo;
-	}
-	
+public class Customer {
 	private int customerID;
 	private String name;
 	private String address;
 	private String email;
 	private String password;
-	private String reenterPassword;
-	private String accounts;
-	private int accountNo;
+	private Map<Integer,Account> accounts = new TreeMap<Integer,Account>();
 	
+	public Customer() {
+		
+	}
 	
+	public Customer(int customerID, String name, String address, String email, String password, String reenterPassword, int accountNo) {
+		this.customerID= customerID;
+		this.name = name;
+		this.address = address;
+		this.email = email;
+		this.password=password;
+	}
 	
 	public int getCustomerID() {
 		return customerID;
@@ -58,24 +54,13 @@ public class Customer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getAccounts() {
+
+	public Map<Integer, Account> getAccounts() {
 		return accounts;
 	}
-	public void setAccounts(String accounts) {
+
+	public void setAccounts(Map<Integer, Account> accounts) {
 		this.accounts = accounts;
 	}
-	public int getAccountNo() {
-		return accountNo;
-	}
-	public void setAccountNo(int accountNo) {
-		this.accountNo = accountNo;
-	}
-	public String getReenterPassword() {
-		return reenterPassword;
-	}
-	public void setReenterPassword(String reenterPassword) {
-		this.reenterPassword = reenterPassword;
-	}
-	
-	
+
 }

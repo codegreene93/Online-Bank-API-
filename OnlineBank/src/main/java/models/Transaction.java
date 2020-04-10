@@ -1,7 +1,13 @@
 package models;
 
 public class Transaction {
-
+	private int transactionCode;
+	private int accountNo;
+	private int date;
+	private String description;
+	private String transactionType;
+	private int newBalance;
+	
 	public Transaction() {
 		
 	}
@@ -14,14 +20,6 @@ public class Transaction {
 		this.transactionType=transactionType;
 		this.newBalance= newBalance;
 	}
-	
-	private int transactionCode;
-	private int accountNo;
-	private int date;
-	private String description;
-	private String transactionType;
-	private int newBalance;
-	
 	
 	public int getTransactionCode() {
 		return transactionCode;
@@ -58,7 +56,5 @@ public class Transaction {
 	}
 	public void setNewBalance(int newBalance) {
 		this.newBalance = newBalance;
-	}
-	
-	
+	}	
 }
