@@ -3,7 +3,7 @@ package models;
 public class Transaction {
 	private int transactionCode;
 	private int accountNo;
-	private int date;
+	private double date;
 	private String description;
 	private String transactionType;
 	private int newBalance;
@@ -12,7 +12,7 @@ public class Transaction {
 		
 	}
 	
-	public Transaction(int transactionCode, int accountNo, int date, String description, String transactionType, int newBalance) {
+	public Transaction(int transactionCode, int accountNo, double date, String description, String transactionType, int newBalance) {
 		this.transactionCode=transactionCode;
 		this.accountNo=accountNo;
 		this.date = date;
@@ -33,7 +33,7 @@ public class Transaction {
 	public void setAccountNo(int accountNo) {
 		this.accountNo = accountNo;
 	}
-	public int getDate() {
+	public double getDate() {
 		return date;
 	}
 	public void setDate(int date) {

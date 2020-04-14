@@ -10,6 +10,7 @@ public class Customer {
 	private String address;
 	private String email;
 	private String password;
+	
 	private Map<Integer,Account> accounts = new TreeMap<Integer,Account>();
 	
 	public Customer() {
@@ -62,5 +63,6 @@ public class Customer {
 	public void setAccounts(Map<Integer, Account> accounts) {
 		this.accounts = accounts;
 	}
+
 
 }

@@ -13,18 +13,18 @@ public class DatabaseCustomer {
 	private static Map <String, Account> accounts = new TreeMap<String, Account>();
 	private static Map <String, Transaction> transactions = new TreeMap<String, Transaction>();
 	
-	private static Map <Integer, Customer> getCustomer(){
+	public static Map <Integer, Customer> getCustomer(){
 		
 		return customers;
 		
 	} 
 	
-	private static Map <String, Account> getAccount(){
+	public static Map <String, Account> getAccount(){
 		
 		return accounts;
 	} 
 	
-	private static  Map <String, Transaction> getTransaction(){
+	public static  Map <String, Transaction> getTransaction(){
 		
 		return transactions;
 		
