@@ -1,5 +1,8 @@
 package models;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Transaction {
 	private int transactionCode;
 	private int accountNo;
@@ -7,6 +10,7 @@ public class Transaction {
 	private String description;
 	private String transactionType;
 	private int newBalance;
+	private static Map <String, Account> accounts = new TreeMap<String, Account>();
 	
 	public Transaction() {
 		
