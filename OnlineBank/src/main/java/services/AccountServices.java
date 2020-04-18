@@ -41,4 +41,9 @@ public class AccountServices {
 		accounts.put(account.getAccountType(),account);
 		return account;
 	}
+	
+	//Add a method to get an account by customer name
+	
+	//Add a method to remove an account by customer name
+	
 }
