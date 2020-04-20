@@ -31,13 +31,16 @@ public class TransactionServices {
 	}
 	
 	public Transaction getTransaction(int transactionCode) {
-		Transaction trans =  trans.get(transactionCode);
+		Transaction trans =  transaction.get(transactionCode);
 		
 		if(trans == null) {
-			String exception = "Customer ID " + customerID + " not found";
+			String exception = "Transaction " + transactionCode + " not found";
 		}
 		return trans;
 	}
 	
 	//please add a method to remove a transaction
+	public Transaction removeTransaction(int transactionCode) {
+		return transaction.remove(transactionCode);
+	}
 }

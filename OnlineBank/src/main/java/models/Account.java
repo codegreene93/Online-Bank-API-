@@ -8,6 +8,7 @@ public class Account {
 
 	private int accountNo;
 	private int customerID;
+	private String customerName;
 	private int sortNo;
 	private String accountType;
 	private int balance;
@@ -17,12 +18,13 @@ public class Account {
 		
 	}
 	
-	public Account(int accountNo, int customerID,int sortNo, String accountType, int balance) {
+	public Account(int accountNo, int customerID,String customerName,int sortNo, String accountType, int balance) {
 		this.accountNo = accountNo;
 		this.customerID= customerID;
 		this.sortNo = sortNo;
 		this.accountType = accountType;
 		this.balance = balance;
+		this.customerName = customerName;
 	}
 	
 	public int getAccountNo() {
@@ -62,6 +64,14 @@ public class Account {
 
 	public void setTransactions(HashMap<Integer, Transaction> transactions) {
 		this.transactions = transactions;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
 }
