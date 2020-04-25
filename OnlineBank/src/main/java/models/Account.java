@@ -1,9 +1,13 @@
 package models;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Account {
 
 	private int accountNo;

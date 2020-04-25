@@ -11,8 +11,11 @@ import models.Customer;
 import models.Transaction;
 
 public class AccountServices {
+	
+	Customer cust = new Customer();
 
 	private Map <String, Account> accounts = DatabaseCustomer.getAccount();
+	Map <Integer, Customer> customers = DatabaseCustomer.getCustomer();
 	
 	public AccountServices() {
 		Account acc1 = new Account(1, 001,"Chris", 456, "Debit Acc", 156);
@@ -26,6 +29,20 @@ public class AccountServices {
 	
 	public List<Account> getAccount(){
 		return new ArrayList<Account>(accounts.values());
+	}
+	
+public Map<String, Account> getAccounts(){
+		
+		return accounts;
+	}
+	
+	public Account getCustomer(int customerID) {
+		Customer cust =  customers.get(customerID);
+		
+		if(cust == null) {
+			String exception = "Customer ID " + customerID + " not found";
+		}
+		return null;
 	}
 	
 	public Account getAccount(int accountNo) {

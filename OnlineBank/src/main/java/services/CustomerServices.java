@@ -10,7 +10,8 @@ import models.Customer;
 
 public class CustomerServices {
 
-	private Map <Integer, Customer> customers = DatabaseCustomer.getCustomer();
+	Map <Integer, Customer> customers = DatabaseCustomer.getCustomer();
+	
 	
 	public CustomerServices() {
 	
@@ -23,6 +24,11 @@ public class CustomerServices {
 	customers.put(003, new Customer(3,"Rachel", "Kevin Street Lower, Dublin", "Rachel@test.com", "Password1", "Password1", 27));
 	
 	Map<Integer, Account> customer1 = customers.get(001).getAccounts();
+	}
+	
+	public Map <Integer, Customer> getCustomers1(){
+		
+		return customers;
 	}
 	
 	public List<Customer> getCustomers(){
@@ -38,14 +44,29 @@ public class CustomerServices {
 		return cust;
 	}
 	
+	public Customer deleteCustomer(int customerID) {
+		Customer customer = getCustomer(customerID);
+		customers.remove(customer);
+		return customer;
+	}
+	
 	public Customer createCustomer(Customer customer) {
 		customer.setCustomerID(customers.size() + 1);
 		customers.put(customer.getCustomerID(),customer);
 		return customer;
 	}
 	
+	public Customer getLogin(String email, String password) {
+		Customer customer = new Customer();
+		
+		String customerEmail =  customer.getEmail();
+		String customerPassword = customer.getPassword();
+		
+		if(customerEmail.equalsIgnoreCase(email) && customerPassword.equals(password)){
+			return customer;
+		
+	}
+		return customer;
 	
-	
-	
-	
+	}
 }

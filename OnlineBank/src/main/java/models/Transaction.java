@@ -1,11 +1,16 @@
 package models;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Transaction {
 	private int transactionCode;
 	private int accountNo;
+	private int customerID;
 	private double date;
 	private String description;
 	private String transactionType;
@@ -16,9 +21,10 @@ public class Transaction {
 		
 	}
 	
-	public Transaction(int transactionCode, int accountNo, double date, String description, String transactionType, int newBalance) {
+	public Transaction(int transactionCode, int accountNo, int customerID, double date, String description, String transactionType, int newBalance) {
 		this.transactionCode=transactionCode;
 		this.accountNo=accountNo;
+		this.customerID = customerID;
 		this.date = date;
 		this.description = description;
 		this.transactionType=transactionType;
@@ -60,5 +66,13 @@ public class Transaction {
 	}
 	public void setNewBalance(int newBalance) {
 		this.newBalance = newBalance;
+	}
+
+	public int getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
 	}	
 }

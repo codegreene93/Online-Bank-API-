@@ -1,15 +1,24 @@
 package models;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.sun.research.ws.wadl.Link;
+
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Customer {
 	private int customerID;
 	private String name;
 	private String address;
 	private String email;
 	private String password;
+
 	
 	private Map<Integer,Account> accounts = new TreeMap<Integer,Account>();
 	
@@ -34,6 +43,7 @@ public class Customer {
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -63,6 +73,13 @@ public class Customer {
 	public void setAccounts(Map<Integer, Account> accounts) {
 		this.accounts = accounts;
 	}
+
+	public Customer getLogin(String email, String password) {
+	
+		return null;
+	}
+
+	
 
 
 }
